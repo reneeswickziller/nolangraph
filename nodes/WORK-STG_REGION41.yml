@@ -1,73 +1,81 @@
-steps:
-  STG_REGION41-4ac9b64f-db27-4efe-99fd-7b91ac027446:
-    operation:
-      config:
-        insertStrategy: INSERT
-        postSQL: ""
-        preSQL: ""
-        testsEnabled: true
-        truncateBefore: true
-      database: ""
-      deployEnabled: true
-      description: ""
-      isMultisource: false
-      locationName: WORK
-      materializationType: table
-      metadata:
-        appliedNodeTests: []
-        columns:
-          - columnReference:
-              columnCounter: a121ee1a-8f7c-44eb-ae6f-8c01989b1e89
-              stepCounter: 4ac9b64f-db27-4efe-99fd-7b91ac027446
-            dataType: NUMBER(38,0)
-            description: ""
-            name: R_REGIONKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 7840fd95-442f-4367-9bd4-1325ed60d1b0
-                    stepCounter: 66a509cc-f921-42e4-835c-a0275084ee4f
-                transform: ""
-          - columnReference:
-              columnCounter: 7c815b88-4589-4b4c-a6b2-9632f87ae2e1
-              stepCounter: 4ac9b64f-db27-4efe-99fd-7b91ac027446
-            dataType: VARCHAR(25)
-            description: ""
-            name: R_NAME
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 418a97a9-de21-4701-8648-b4db2b833b61
-                    stepCounter: 66a509cc-f921-42e4-835c-a0275084ee4f
-                transform: ""
-          - columnReference:
-              columnCounter: 97e150e6-b03f-41fc-b655-df72319705ce
-              stepCounter: 4ac9b64f-db27-4efe-99fd-7b91ac027446
-            dataType: VARCHAR(152)
-            description: ""
-            name: R_COMMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: c341d853-0b9d-4b7b-9063-1f4c5ed9c72b
-                    stepCounter: 66a509cc-f921-42e4-835c-a0275084ee4f
-                transform: ""
-        cteString: ""
-        enabledColumnTestIDs: []
-        sourceMapping:
-          - aliases: {}
-            customSQL:
-              customSQL: ""
-            dependencies:
-              - locationName: WORK
-                nodeName: STG_REGION17
-            join:
-              joinCondition: FROM {{ ref('WORK', 'STG_REGION17') }} "STG_REGION17"
-            name: STG_REGION41
-            noLinkRefs: []
-      name: STG_REGION41
-      overrideSQL: false
-      schema: ""
-      sqlType: Stage
-      type: sql
-    stepCounter: 4ac9b64f-db27-4efe-99fd-7b91ac027446
+fileVersion: 1
+id: 4ac9b64f-db27-4efe-99fd-7b91ac027446
+name: STG_REGION41
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a121ee1a-8f7c-44eb-ae6f-8c01989b1e89
+          stepCounter: 4ac9b64f-db27-4efe-99fd-7b91ac027446
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: R_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7840fd95-442f-4367-9bd4-1325ed60d1b0
+                stepCounter: 66a509cc-f921-42e4-835c-a0275084ee4f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c815b88-4589-4b4c-a6b2-9632f87ae2e1
+          stepCounter: 4ac9b64f-db27-4efe-99fd-7b91ac027446
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: R_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 418a97a9-de21-4701-8648-b4db2b833b61
+                stepCounter: 66a509cc-f921-42e4-835c-a0275084ee4f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97e150e6-b03f-41fc-b655-df72319705ce
+          stepCounter: 4ac9b64f-db27-4efe-99fd-7b91ac027446
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: R_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c341d853-0b9d-4b7b-9063-1f4c5ed9c72b
+                stepCounter: 66a509cc-f921-42e4-835c-a0275084ee4f
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_REGION17
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_REGION17') }} "STG_REGION17"
+        name: STG_REGION41
+        noLinkRefs: []
+  name: STG_REGION41
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

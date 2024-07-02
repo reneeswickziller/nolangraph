@@ -1,85 +1,95 @@
-steps:
-  STG_NATION2-4b60083d-f3a3-4e97-8b46-9b02338763ce:
-    operation:
-      config:
-        insertStrategy: INSERT
-        postSQL: ""
-        preSQL: ""
-        testsEnabled: true
-        truncateBefore: true
-      database: ""
-      deployEnabled: true
-      description: ""
-      isMultisource: false
-      locationName: WORK
-      materializationType: table
-      metadata:
-        appliedNodeTests: []
-        columns:
-          - columnReference:
-              columnCounter: 31c723dd-f9fd-4a8e-957c-780ab95cf722
-              stepCounter: 4b60083d-f3a3-4e97-8b46-9b02338763ce
-            dataType: NUMBER(38,0)
-            description: ""
-            name: N_NATIONKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 20da60e2-85a0-45d6-a237-0201612df6d4
-                    stepCounter: caf79795-040a-4aed-afce-b6b38947c889
-                transform: ""
-          - columnReference:
-              columnCounter: cfed6fef-b76f-4496-b1bd-92080811f7b3
-              stepCounter: 4b60083d-f3a3-4e97-8b46-9b02338763ce
-            dataType: VARCHAR(25)
-            description: ""
-            name: N_NAME
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2ae9fed8-99fe-474f-b099-09789fdf3d04
-                    stepCounter: caf79795-040a-4aed-afce-b6b38947c889
-                transform: ""
-          - columnReference:
-              columnCounter: fa286c64-1d62-4ffb-84b3-7b01ef6b955f
-              stepCounter: 4b60083d-f3a3-4e97-8b46-9b02338763ce
-            dataType: NUMBER(38,0)
-            description: ""
-            name: N_REGIONKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1bf2e504-556d-4031-9c4b-913ea1a56261
-                    stepCounter: caf79795-040a-4aed-afce-b6b38947c889
-                transform: ""
-          - columnReference:
-              columnCounter: 499db833-a0c6-4427-8e39-8ca687b67858
-              stepCounter: 4b60083d-f3a3-4e97-8b46-9b02338763ce
-            dataType: VARCHAR(152)
-            description: ""
-            name: N_COMMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 9a27b101-ae96-4a74-acec-65b6528699b7
-                    stepCounter: caf79795-040a-4aed-afce-b6b38947c889
-                transform: ""
-        cteString: ""
-        enabledColumnTestIDs: []
-        sourceMapping:
-          - aliases: {}
-            customSQL:
-              customSQL: ""
-            dependencies:
-              - locationName: WORK
-                nodeName: STG_NATION
-            join:
-              joinCondition: FROM {{ ref('WORK', 'STG_NATION') }} "STG_NATION"
-            name: STG_NATION2
-            noLinkRefs: []
-      name: STG_NATION2
-      overrideSQL: false
-      schema: ""
-      sqlType: Stage
-      type: sql
-    stepCounter: 4b60083d-f3a3-4e97-8b46-9b02338763ce
+fileVersion: 1
+id: 4b60083d-f3a3-4e97-8b46-9b02338763ce
+name: STG_NATION2
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 31c723dd-f9fd-4a8e-957c-780ab95cf722
+          stepCounter: 4b60083d-f3a3-4e97-8b46-9b02338763ce
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 20da60e2-85a0-45d6-a237-0201612df6d4
+                stepCounter: caf79795-040a-4aed-afce-b6b38947c889
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfed6fef-b76f-4496-b1bd-92080811f7b3
+          stepCounter: 4b60083d-f3a3-4e97-8b46-9b02338763ce
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: N_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2ae9fed8-99fe-474f-b099-09789fdf3d04
+                stepCounter: caf79795-040a-4aed-afce-b6b38947c889
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa286c64-1d62-4ffb-84b3-7b01ef6b955f
+          stepCounter: 4b60083d-f3a3-4e97-8b46-9b02338763ce
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1bf2e504-556d-4031-9c4b-913ea1a56261
+                stepCounter: caf79795-040a-4aed-afce-b6b38947c889
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 499db833-a0c6-4427-8e39-8ca687b67858
+          stepCounter: 4b60083d-f3a3-4e97-8b46-9b02338763ce
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9a27b101-ae96-4a74-acec-65b6528699b7
+                stepCounter: caf79795-040a-4aed-afce-b6b38947c889
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_NATION
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_NATION') }} "STG_NATION"
+        name: STG_NATION2
+        noLinkRefs: []
+  name: STG_NATION2
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

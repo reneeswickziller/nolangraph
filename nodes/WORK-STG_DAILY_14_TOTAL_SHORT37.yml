@@ -1,61 +1,67 @@
-steps:
-  STG_DAILY_14_TOTAL_SHORT37-81b1e5aa-6b16-4e56-8e4a-525ba1c9aa44:
-    operation:
-      config:
-        insertStrategy: INSERT
-        postSQL: ""
-        preSQL: ""
-        testsEnabled: true
-        truncateBefore: true
-      database: ""
-      deployEnabled: true
-      description: ""
-      isMultisource: false
-      locationName: WORK
-      materializationType: table
-      metadata:
-        appliedNodeTests: []
-        columns:
-          - columnReference:
-              columnCounter: f3bbb88b-4a06-4cc3-a453-e4db58cbc2a9
-              stepCounter: 81b1e5aa-6b16-4e56-8e4a-525ba1c9aa44
-            dataType: VARIANT
-            description: ""
-            name: V
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 6ccb15ed-73da-4f74-931f-86645575ab52
-                    stepCounter: 87b327b0-d521-4c9e-899f-2393bd6ce74f
-                transform: ""
-          - columnReference:
-              columnCounter: 10f53ecb-a4a5-4260-8c61-c1cd481a49c0
-              stepCounter: 81b1e5aa-6b16-4e56-8e4a-525ba1c9aa44
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            name: T
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 7f3c8d7c-5799-4ba9-b388-259395c660c0
-                    stepCounter: 87b327b0-d521-4c9e-899f-2393bd6ce74f
-                transform: ""
-        cteString: ""
-        enabledColumnTestIDs: []
-        sourceMapping:
-          - aliases: {}
-            customSQL:
-              customSQL: ""
-            dependencies:
-              - locationName: WORK
-                nodeName: STG_DAILY_14_TOTAL_SHORT13
-            join:
-              joinCondition: FROM {{ ref('WORK', 'STG_DAILY_14_TOTAL_SHORT13') }} "STG_DAILY_14_TOTAL_SHORT13"
-            name: STG_DAILY_14_TOTAL_SHORT37
-            noLinkRefs: []
-      name: STG_DAILY_14_TOTAL_SHORT37
-      overrideSQL: false
-      schema: ""
-      sqlType: Stage
-      type: sql
-    stepCounter: 81b1e5aa-6b16-4e56-8e4a-525ba1c9aa44
+fileVersion: 1
+id: 81b1e5aa-6b16-4e56-8e4a-525ba1c9aa44
+name: STG_DAILY_14_TOTAL_SHORT37
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3bbb88b-4a06-4cc3-a453-e4db58cbc2a9
+          stepCounter: 81b1e5aa-6b16-4e56-8e4a-525ba1c9aa44
+        config: {}
+        dataType: VARIANT
+        description: ""
+        name: V
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6ccb15ed-73da-4f74-931f-86645575ab52
+                stepCounter: 87b327b0-d521-4c9e-899f-2393bd6ce74f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10f53ecb-a4a5-4260-8c61-c1cd481a49c0
+          stepCounter: 81b1e5aa-6b16-4e56-8e4a-525ba1c9aa44
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: T
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7f3c8d7c-5799-4ba9-b388-259395c660c0
+                stepCounter: 87b327b0-d521-4c9e-899f-2393bd6ce74f
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_DAILY_14_TOTAL_SHORT13
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_DAILY_14_TOTAL_SHORT13') }} "STG_DAILY_14_TOTAL_SHORT13"
+        name: STG_DAILY_14_TOTAL_SHORT37
+        noLinkRefs: []
+  name: STG_DAILY_14_TOTAL_SHORT37
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
